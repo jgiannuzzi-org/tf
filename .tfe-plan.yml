@@ -4,6 +4,12 @@ workspaces:
     policy:
       approval:
         - lgtm
+  - organization: jgiannuzzi
+    name: tf2
+    branch: develop
+    policy:
+      approval:
+        - anything goes
 
 approval_rules:
   - name: lgtm
@@ -20,3 +26,4 @@ approval_rules:
       count: 1
       teams:
         - "jgiannuzzi-org/tf-approvers"
+  - name: anything goes
