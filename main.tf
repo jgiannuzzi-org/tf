@@ -8,3 +8,9 @@ provider "null" {
 resource "tls_private_key" "key" {
   algorithm = "ECDSA"
 }
+
+resource "null_resource" "algo" {
+  triggers = {
+    algorithm = tls_private_key.key.algorithm
+  }
+}
