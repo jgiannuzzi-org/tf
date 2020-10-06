@@ -1,21 +1,19 @@
-workspaces:
-  - organization: jgiannuzzi
-    name: tf
-    policy:
-      approval:
-        - lgtm
+policy:
+  approval:
+    - approved for merge
 
 approval_rules:
-  - name: lgtm
+  - name: approved for merge
+    if:
+      has_successful_status:
+        - "TFE/jgiannuzzi/tf"
     options:
       invalidate_on_push: true
       request_review:
         enabled: true
+        mode: teams
       methods:
-        comments:
-          - "lgtm"
-          - "LGTM"
-        github_review: false
+        github_review: true
     requires:
       count: 1
       teams:
