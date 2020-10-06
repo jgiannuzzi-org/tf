@@ -16,4 +16,4 @@ merge:
 update:
   trigger:
     labels: ["wip", "update me"]
-    comments: ["update"]
+    comments: ["update", ":up:", ":arrow_up:"]
