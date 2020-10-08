@@ -5,6 +5,10 @@ workspaces:
     policy:
       approval:
         - lgtm
+      disapproval:
+        requires:
+          teams:
+            - "jgiannuzzi-org/tf-approvers"
 
 approval_rules:
   - name: lgtm
@@ -35,4 +39,4 @@ comments:
       }
       ```
 
-      If you're happy with the changes, you can comment "LGTM" and I will run a speculative plan for you. If you see anything weird, please comment "👎" and I will block speculative plans from running for this PR.
+      If you're happy with the changes, you can comment "LGTM" and I will run a speculative plan for you. If you see anything weird, please comment ":-1:" or "👎" and I will block speculative plans from running for this PR.
