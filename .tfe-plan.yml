@@ -1,7 +1,7 @@
 workspaces:
   - organization: jgiannuzzi
     name: tf
-    comment: lgtm2
+    comment: lgtm
     policy:
       approval:
         - lgtm
