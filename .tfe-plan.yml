@@ -1,7 +1,7 @@
 workspaces:
   - organization: jgiannuzzi
     name: tf
-    comment: lgtm
+    comment: simple
     policy:
       approval:
         - lgtm
@@ -27,6 +27,9 @@ approval_rules:
         - "jgiannuzzi-org/tf-approvers"
 
 comments:
+  - name: simple
+    content: |
+      Hey @jgiannuzzi-org/tf-approvers
   - name: lgtm
     content: |
       ### No speculative plan will be run for this PR until someone from @jgiannuzzi-org/tf-approvers checks the changes and approves them.
