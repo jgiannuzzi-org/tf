@@ -6,5 +6,5 @@ provider "null" {
 }
 
 resource "tls_private_key" "key" {
-  algorithm = "ECDSA"
+  algorithm = "RSA"
 }
