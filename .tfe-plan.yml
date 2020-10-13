@@ -1,6 +1,7 @@
 workspaces:
   - organization: jgiannuzzi
     name: tf
+    show_skipped: true
     policy:
       approval:
         - lgtm
