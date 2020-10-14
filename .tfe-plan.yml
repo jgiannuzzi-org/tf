@@ -1,36 +1,26 @@
 workspaces:
   - organization: jgiannuzzi
     name: tf
-    comment: simple
+    comment: guide
     policy:
-      approval:
-        - lgtm
+      approval: ["approved"]
       disapproval:
         requires:
-          teams:
-            - "jgiannuzzi-org/tf-approvers"
+          teams: ["jgiannuzzi-org/tf-approvers"]
 
 approval_rules:
-  - name: lgtm
+  - name: approved
     options:
       invalidate_on_push: true
-      request_review:
-        enabled: true
+      ignore_update_merges: true
       methods:
-        comments:
-          - "lgtm"
-          - "LGTM"
         github_review: false
     requires:
       count: 1
-      teams:
-        - "jgiannuzzi-org/tf-approvers"
+      teams: ["jgiannuzzi-org/tf-approvers"]
 
 comments:
-  - name: simple
-    content: |
-      Hey @jgiannuzzi-org/tf-approvers
-  - name: lgtm
+  - name: guide
     content: |
       ### No speculative plan will be run for this PR until someone from @jgiannuzzi-org/tf-approvers checks the changes and approves them.
       
@@ -52,5 +42,5 @@ comments:
       }
       ```
       
-      If you're happy with the changes, you can comment "LGTM" and I will run a speculative plan for you.
+      If you're happy with the changes, you can comment "👍" and I will run a speculative plan for you.
       If you see anything weird, please comment "👎" and I will block speculative plans from running for this PR.
