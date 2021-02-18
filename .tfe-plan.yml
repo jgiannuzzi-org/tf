@@ -6,7 +6,7 @@ workspaces:
       approval: ["approved"]
       disapproval:
         requires:
-          teams: ["jgiannuzzi-org/tf-approvers"]
+          teams: ["jgiannuzzi-org/TF-Approvers"]
 
 approval_rules:
   - name: approved
@@ -19,7 +19,7 @@ approval_rules:
         github_review: false
     requires:
       count: 1
-      teams: ["jgiannuzzi-org/tf-approvers"]
+      teams: ["jgiannuzzi-org/TF-Approvers"]
 
 comments:
   - name: guide
