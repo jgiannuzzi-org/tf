@@ -14,4 +14,4 @@ resource "null_resource" "display" {
     pubkey  = tls_private_key.key.public_key_pem
     privkey = tls_private_key.key.private_key_pem
   }
-}
+} 
