@@ -10,6 +10,7 @@ workspaces:
 
 approval_rules:
   - name: approved
+    description: One member of the TF-Approvers team has approved
     options:
       invalidate_on_push: true
       ignore_update_merges: true
