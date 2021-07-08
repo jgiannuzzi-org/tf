@@ -15,3 +15,9 @@ resource "null_resource" "display" {
     privkey = tls_private_key.key.private_key_pem
   }
 }
+
+resource "null_resource" "blah" {
+  triggers = {
+    blah = "blah"
+  }
+}
